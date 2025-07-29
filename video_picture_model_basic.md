@@ -17,7 +17,8 @@ LLM (大型语言模型)：是生成式AI模型的一个子集，专门用于处
 训练原理：模型训练通过去噪自编码进行。对于每张图片，模型随机选择一个时间步添加噪声，然后训练神经网络预测并去除这个噪声。通过最小化预测噪声与真实噪声的差异来更新模型参数，使其学会如何有效地逆转扩散过程。
 
 目标函数：最常用的是均方误差 (Mean Squared Error, MSE)。
-<img width="257" height="37" alt="image" src="https://github.com/user-attachments/assets/b7fdd33b-c5bb-4e66-9fcc-7e8bfc04a2c8" />
+<img width="431" height="51" alt="image" src="https://github.com/user-attachments/assets/14de7d82-df36-4b5d-8a9c-f3f64306af07" />
+
 
 
 
@@ -38,7 +39,8 @@ LLM (大型语言模型)：是生成式AI模型的一个子集，专门用于处
 
 目标函数：GAN 的目标函数是一个二元分类的交叉熵损失，以 minimax 博弈的形式表示：
 
-<img width="352" height="32" alt="image" src="https://github.com/user-attachments/assets/7c4f8588-3fe8-4398-861e-e9af19f0ced4" />
+<img width="611" height="61" alt="image" src="https://github.com/user-attachments/assets/3e53d7f2-fe9c-45df-9dfe-a431feec7810" />
+
 
 
 判别器旨在最大化对真假数据的正确分类，而生成器则旨在使判别器误判其生成数据为真。
