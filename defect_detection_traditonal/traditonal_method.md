@@ -8,11 +8,19 @@
 自动计算：
 我们讨论了两种自动计算阈值的方法：
 
-大津法 (cv2.THRESH_OTSU)：
+## 大津法 (cv2.THRESH_OTSU)：
 假设图像直方图是双峰的，自动找到一个最佳的全局阈值来分割前景和背景。适用于光照均匀的图像。
 
-自适应阈值 (cv2.adaptiveThreshold)：
+## 自适应阈值 (cv2.adaptiveThreshold)：cv2.adaptiveThreshold(..., 11, 5)
+blockSize (11) 决定了用于计算局部阈值的邻域大小。
+C:5
+
+cv2.adaptiveThreshold 的原理是，对于每一个像素，它会查看其周围 11x11 大小的区域，然后计算这个区域的平均亮度。
 根据图像的局部区域动态地计算阈值，能有效处理光照不均匀的图像。
+cv2.adaptiveThreshold 的核心是 阈值 = 局部平均值 - C。
+cv2.THRESH_BINARY_INV 的规则：像素值 ≤ 阈值 → 白色；像素值 > 阈值 → 黑色。
+### 识别不出来， 调blocksize, 更大
+### 识别过多: -杂音， 调C: 更大
 
 
 # 2. cv2.morphologyEx (闭运算) - 填充孔洞
