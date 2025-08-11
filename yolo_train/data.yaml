@@ -1,0 +1,6 @@
+train: C:/Drivers/01_code_template/010_computer_vision/02_case_defect_detection/200_method_yolo/dataset/train/images
+val: C:/Drivers/01_code_template/010_computer_vision/02_case_defect_detection/200_method_yolo/dataset/valid/images
+test: C:/Drivers/01_code_template/010_computer_vision/02_case_defect_detection/200_method_yolo/dataset/test/images
+
+nc: 1
+names: ['defect']
